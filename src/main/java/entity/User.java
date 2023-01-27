@@ -12,11 +12,14 @@ public class User {
 
     private int age;
 
-    public User(Long id, String name, String lastName, int age) {
+    private UserStatus userStatus;
+
+    public User(Long id, String name, String lastName, int age, UserStatus userStatus) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
+        this.userStatus = userStatus;
     }
 
     public void setName(String name) {
@@ -49,6 +52,14 @@ public class User {
 
     public Long getId() {
         return id;
+    }
+
+    public UserStatus getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(UserStatus userStatus) {
+        this.userStatus = userStatus;
     }
 
     @Override
