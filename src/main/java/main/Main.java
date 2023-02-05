@@ -14,6 +14,9 @@ public class Main {
         User user2 = new User(33L, "Valera", "Vashkevich", 18, UserStatus.BLOCKED);
         UserRepository userRepository = new UserRepositoryImpl(new ArrayList<>());
         userRepository.save(user1);
-        userRepository.save(user1);
+        userRepository.save(user2);
+        System.out.println(userRepository.findAll());
+        userRepository.update(new User(35L, "Igor", "Vashkevich", 19, UserStatus.FRIENDLY));
+        System.out.println(userRepository.findAll());
     }
 }
